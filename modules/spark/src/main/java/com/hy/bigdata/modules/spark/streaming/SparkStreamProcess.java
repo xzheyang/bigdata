@@ -101,6 +101,18 @@ public class SparkStreamProcess {
     /**
      *   设置容错检查点,且恢复数据
      *
+     *
+     * question:
+     *  1.若流式程序代码或配置改变，则先停掉旧的spark Streaming程序，然后把新的程序打包编译后重新执行,会导致反序列失败报错,
+     *      这样像kafka就需要维护消费的 offsets,保证容错
+     *
+     *  2.spark在使用checkpoint恢复的时候不能再执行流的定义的流程，新加入的流的状态在恢复完成后的spark状态下处于未初始化状态，
+     *      在spark根据checkpoint恢复的时候将不会再对各个流进行初始化，而是直接保存的状态中恢复。
+     *      这将导致新加入的流还未初始化就被调用，抛出stream还未初始化的异常。
+     *
+     *  3.spark在使用checkpoint恢复的过程中，不能恢复kryo序列化的类（比如采用kryo序列化的广播变量）。
+     *      在进行checkpoint的过程，直接使用jdk的ObjectOutputStream进行序列化，如果只是实现了kryo序列化接口的类是不能被成功序列化的，自然是无法被写进checkpoint文件中被恢复的。
+     *
      * @param checkpointPath    path
      * @param createFunction    create function
      * @return  checkpoint data recover, if path not have checkpoint,create a new by create function
