@@ -1,6 +1,5 @@
-package com.hy.bigdata.modules.spark.struct_stream;
+package com.hy.bigdata.modules.spark.examples.struct_stream;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.sql.Dataset;
@@ -26,7 +25,7 @@ public class ISparkStructStream {
      */
     public static void main(String[] args) {
 
-        SparkConf conf = new SparkConf().setMaster("local[*]").setAppName("spark 官方样例");
+        SparkConf conf = new SparkConf().setMaster("local[*]").setAppName("org.apache.spark 官方样例");
         SparkSession spark = SparkSession.builder().config(conf).getOrCreate();
 
         //读取socket

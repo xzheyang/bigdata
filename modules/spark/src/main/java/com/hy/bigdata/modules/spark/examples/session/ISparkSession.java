@@ -1,6 +1,5 @@
-package com.hy.bigdata.modules.spark.session;
+package com.hy.bigdata.modules.spark.examples.session;
 
-import org.apache.spark.sql.AnalysisException;
 import org.apache.spark.sql.SparkSession;
 
 /**

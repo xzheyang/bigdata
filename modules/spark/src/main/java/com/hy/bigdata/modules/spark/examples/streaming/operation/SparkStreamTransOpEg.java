@@ -1,8 +1,7 @@
-package com.hy.bigdata.modules.spark.streaming.operation;
+package com.hy.bigdata.modules.spark.examples.streaming.operation;
 
-import com.hy.bigdata.modules.spark.streaming.SparkStreamProcess;
+import com.hy.bigdata.modules.spark.examples.streaming.SparkStreamProcess;
 import org.apache.spark.api.java.JavaPairRDD;
-import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.Optional;
 import org.apache.spark.api.java.function.Function3;
 import org.apache.spark.storage.StorageLevel;
@@ -36,7 +35,7 @@ public class SparkStreamTransOpEg {
      *
      *  通过获取初始状态和现有状态获得结果
      *
-     * @param jsc               spark stream context
+     * @param jsc               org.apache.spark stream context
      * @param wordsStream       the latest calculations
      */
     public static void updateStateByKey(JavaStreamingContext jsc, JavaPairDStream<String, Integer> wordsStream) {

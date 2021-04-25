@@ -14,11 +14,12 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spark</module>
+        <module>org.apache.spark</module>
         <module>hive</module>
         <module>hbase</module>
         <module>kafka</module>
         <module>hdfs</module>
+        <module>modules-common</module>
     </modules>
 
     <dependencies>

@@ -1,4 +1,4 @@
-package com.hy.bigdata.modules.spark.streaming;
+package com.hy.bigdata.modules.spark.examples.streaming;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.function.Function0;
@@ -15,7 +15,7 @@ import java.util.Arrays;
 
 /**
  *
- * spark streaming
+ * org.apache.spark streaming
  *
  */
 public class SparkStreamProcess {
@@ -76,7 +76,7 @@ public class SparkStreamProcess {
             javaStreamingContext.awaitTermination();
         } catch (InterruptedException e) {
             e.printStackTrace();
-            throw new RuntimeException(" killed the wordCount spark streaming ");
+            throw new RuntimeException(" killed the wordCount org.apache.spark streaming ");
         }
 
     }

@@ -1,4 +1,4 @@
-package com.hy.bigdata.modules.spark.structure;
+package com.hy.bigdata.modules.spark.examples.structure;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;

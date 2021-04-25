@@ -1,4 +1,4 @@
-#spark
+#org.apache.spark
 
 ##目录
 
@@ -29,12 +29,14 @@
 ###component
     spark相关组件使用的备份,注意:这里仅仅为最简单的标准支持,复杂具体组件操作还是在adapter
     
-###common
-    公共实现操作,不能分类的就暂时存放在这里,注意只能将不能分类的操作放在此处
+###modules-common
+    modules模块下的公共实现操作,不能分类的就暂时存放在这里,注意只能将不能分类的操作放在此处
 
 
 ###examples
     案例集合(和框架相关的操作,和业务无关)
+####common[案例]
+Spark公共功能使用的案例        
 ####session[案例]
 SparkSession和相关算子相关的样例使用
 ####streaming[案例]
