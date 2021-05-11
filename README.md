@@ -10,7 +10,7 @@
     多模块里单模块的使用
         注:api/template的为统一使用模板接口,在实际使用为统一接口,替代原生使用
 
-###org.apache.spark
+###spark
     spark计算框架主体[special],会引用modules其他组件
 
 ###hbase

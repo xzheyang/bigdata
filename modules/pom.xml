@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>org.apache.spark</module>
+        <module>spark</module>
         <module>hive</module>
         <module>hbase</module>
         <module>kafka</module>

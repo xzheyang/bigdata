@@ -33,7 +33,7 @@ public class SparkStreamFullEg {
         }
 
         //create sparkStream
-        SparkConf conf = new SparkConf().setAppName("socket-org.apache.spark-stream").setMaster("local[*]");
+        SparkConf conf = new SparkConf().setAppName("socket-spark-stream").setMaster("local[*]");
         JavaSparkContext sparkContext = new JavaSparkContext(conf);
         JavaStreamingContext jsc = new JavaStreamingContext(sparkContext, Durations.seconds(10));
 
@@ -54,7 +54,7 @@ public class SparkStreamFullEg {
             jsc.awaitTermination();   // Wait for the computation to terminate
         } catch (InterruptedException e) {
             e.printStackTrace();
-            throw new RuntimeException(" killed the wordCount org.apache.spark streaming ");
+            throw new RuntimeException(" killed the wordCount spark streaming ");
         }
 
     }

@@ -15,7 +15,7 @@ import java.util.Arrays;
 
 /**
  *
- * org.apache.spark streaming
+ * spark streaming
  *
  */
 public class SparkStreamProcess {
@@ -76,7 +76,7 @@ public class SparkStreamProcess {
             javaStreamingContext.awaitTermination();
         } catch (InterruptedException e) {
             e.printStackTrace();
-            throw new RuntimeException(" killed the wordCount org.apache.spark streaming ");
+            throw new RuntimeException(" killed the wordCount spark streaming ");
         }
 
     }

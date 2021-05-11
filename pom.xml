@@ -19,9 +19,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <org.apache.spark.version>2.4.6</org.apache.spark.version>
+        <spark.version>2.4.6</spark.version>
 <!--        <hadoop.version>2.6.0-cdh5.7.0</hadoop.version>-->
-<!--        <org.apache.spark.version>2.1.0.cloudera1</org.apache.spark.version>-->
+<!--        <spark.version>2.1.0.cloudera1</spark.version>-->
 <!--        <hbase.version>1.2.0-cdh5.7.0</hbase.version>-->
     </properties>
 

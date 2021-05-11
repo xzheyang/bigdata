@@ -35,7 +35,7 @@ public class SparkStreamTransOpEg {
      *
      *  通过获取初始状态和现有状态获得结果
      *
-     * @param jsc               org.apache.spark stream context
+     * @param jsc               spark stream context
      * @param wordsStream       the latest calculations
      */
     public static void updateStateByKey(JavaStreamingContext jsc, JavaPairDStream<String, Integer> wordsStream) {

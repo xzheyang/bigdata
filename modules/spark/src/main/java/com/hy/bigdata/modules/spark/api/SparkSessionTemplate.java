@@ -100,17 +100,17 @@ public class SparkSessionTemplate {
      * @return 配置好的SparkConf
      */
     private static SparkConf setConf(SparkConf conf){
-        return conf.set("org.apache.spark.debug.maxToStringFields", "100")
-                .set("org.apache.spark.sql.crossJoin.enabled", "true")
-                .set("org.apache.spark.kryoserializer.buffer","64m")
-                .set("org.apache.spark.serializer","org.apache.org.apache.spark.serializer.KryoSerializer")
-                .set("org.apache.spark.scheduler.listenerbus.eventqueue.size","100000")
-                .set("org.apache.spark.sql.autoBroadcastJoinThreshold","-1")
-                .set("org.apache.spark.default.parallelism","30")
-                .set("org.apache.spark.driver.maxResultSize","8g")
-//                .set("org.apache.spark.kryo.registrator", "com.sinitek.dc.fxq_235_poc.module.common.data.tool.CommonParametersKryoRegistrator")
-                .set("org.apache.spark.kryoserializer.buffer","64m")
-                .set("org.apache.spark.kryoserializer.buffer.max","768m")
+        return conf.set("spark.debug.maxToStringFields", "100")
+                .set("spark.sql.crossJoin.enabled", "true")
+                .set("spark.kryoserializer.buffer","64m")
+                .set("spark.serializer","org.apache.spark.serializer.KryoSerializer")
+                .set("spark.scheduler.listenerbus.eventqueue.size","100000")
+                .set("spark.sql.autoBroadcastJoinThreshold","-1")
+                .set("spark.default.parallelism","30")
+                .set("spark.driver.maxResultSize","8g")
+//                .set("spark.kryo.registrator", "com.sinitek.dc.fxq_235_poc.module.common.data.tool.CommonParametersKryoRegistrator")
+                .set("spark.kryoserializer.buffer","64m")
+                .set("spark.kryoserializer.buffer.max","768m")
                 ;
     }
 

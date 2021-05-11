@@ -25,7 +25,7 @@ public class ISparkStructStream {
      */
     public static void main(String[] args) {
 
-        SparkConf conf = new SparkConf().setMaster("local[*]").setAppName("org.apache.spark 官方样例");
+        SparkConf conf = new SparkConf().setMaster("local[*]").setAppName("spark 官方样例");
         SparkSession spark = SparkSession.builder().config(conf).getOrCreate();
 
         //读取socket
