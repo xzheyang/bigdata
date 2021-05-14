@@ -15,31 +15,74 @@
     <dependencies>
 
         <!-- common big data module -->
+<!--        <dependency>-->
+<!--            <artifactId>modules</artifactId>-->
+<!--            <groupId>com.hy.bigdata</groupId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--            <type>pom</type>-->
+<!--        </dependency>-->
+
         <dependency>
-            <artifactId>modules</artifactId>
+            <artifactId>hbase</artifactId>
             <groupId>com.hy.bigdata</groupId>
             <version>1.0-SNAPSHOT</version>
-            <type>pom</type>
         </dependency>
 
+        <dependency>
+            <artifactId>hdfs</artifactId>
+            <groupId>com.hy.bigdata</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <artifactId>hive</artifactId>
+            <groupId>com.hy.bigdata</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <artifactId>kafka</artifactId>
+            <groupId>com.hy.bigdata</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <artifactId>spark</artifactId>
+            <groupId>com.hy.bigdata</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
 
         <!-- usual module -->
 
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.6</version>
-        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.oracle</groupId>-->
-<!--            <artifactId>ojdbc6</artifactId>-->
-<!--            <version>11.2.0.2.0</version>-->
-<!--        </dependency>-->
+
+
 
 
     </dependencies>
 
+
+    <properties>
+        <!--设置这个值为true,表示移动资源文件时会覆盖原有的文件-->
+        <maven.resources.overwrite>true</maven.resources.overwrite>
+    </properties>
+
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+                <version>3.6.0</version>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>

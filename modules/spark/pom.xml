@@ -52,9 +52,48 @@
             <version>${spark.version}</version>
         </dependency>
 
-
-
     </dependencies>
 
+
+    <build>
+        <plugins>
+<!--            <plugin>-->
+<!--                &lt;!&ndash; 如果打包失败，检查用的jdk是否1.8 &ndash;&gt;-->
+<!--                <groupId>net.alchim31.maven</groupId>-->
+<!--                <artifactId>scala-maven-plugin</artifactId>-->
+<!--                <version>4.3.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>scala-compile-first</id>-->
+<!--                        <goals>-->
+<!--                            <goal>compile</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <includes>-->
+<!--                                <include>**/*.scala</include>-->
+<!--                            </includes>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>scala-test-compile</id>-->
+<!--                        <goals>-->
+<!--                            <goal>testCompile</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+                <version>3.6.0</version>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>

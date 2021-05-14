@@ -34,28 +34,6 @@ public class LocalDsCreateExample {
 
 
     /**
-     * 快速创建字符schema制造的Dataset
-     *
-     * @param lines     行数据
-     * @param colNames  每个行对应的字符名
-     * @return  快速创建字符schema制造的Dataset
-     */
-    public static Dataset<Row> quickCreateStrDs(List<Row> lines,List<String> colNames) {
-        if (CollectionUtils.isEmpty(lines)||CollectionUtils.isEmpty(colNames)){
-            throw new RuntimeException("创建的行数据或者对应的列名为空");
-        }
-
-        List<StructField> struct = new ArrayList<>();
-        for (String colName:colNames){
-            struct.add(DataTypes.createStructField(colName, DataTypes.StringType, true));
-        }
-        StructType schema = DataTypes.createStructType(struct);
-
-        return SESSION.createDataFrame(lines, schema);
-    }
-
-
-    /**
      * @return  返回通过StructType制造的Dataset
      */
     public static Dataset<Row> createByStructTypeExample() {

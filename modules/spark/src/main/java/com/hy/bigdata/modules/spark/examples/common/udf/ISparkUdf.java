@@ -1,29 +1,19 @@
 package com.hy.bigdata.modules.spark.examples.common.udf;
 
-import com.google.common.base.Function;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
 import com.hy.bigdata.modules.spark.api.SparkSessionTemplate;
 import com.hy.bigdata.modules.spark.examples.common.udf.functions.DeleteFirstStrUdf;
 import com.hy.bigdata.modules.spark.examples.common.udf.functions.DistinctStrUdf;
 import com.hy.bigdata.modules.spark.examples.common.udf.functions.StrContainMapUdf;
-import com.hy.bigdata.modules.spark.examples.session.source.LocalDsCreateExample;
+import com.hy.bigdata.modules.spark.structure.utils.DatasetCreateUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.spark.api.java.function.FilterFunction;
 import org.apache.spark.sql.*;
-import org.apache.spark.sql.catalyst.expressions.GenericRow;
 import org.apache.spark.sql.expressions.UserDefinedFunction;
 import org.apache.spark.sql.types.DataTypes;
-import scala.collection.JavaConverters;
-import scala.collection.Seq;
-import scala.reflect.api.JavaUniverse;
-import scala.reflect.api.TypeTags;
-import scala.reflect.runtime.JavaUniverseForce;
 
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -111,7 +101,7 @@ public class ISparkUdf {
         list.add(RowFactory.create("2","me","test,yy,mm"));
         list.add(RowFactory.create("3","her",null));
 
-        return LocalDsCreateExample.quickCreateStrDs(list, Lists.newArrayList("id","name","content"));
+        return DatasetCreateUtils.quickCreateStrDs(list, Lists.newArrayList("id","name","content"));
     }
 
 

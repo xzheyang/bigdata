@@ -12,4 +12,39 @@
     <artifactId>hdfs</artifactId>
 
 
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hadoop.version}</version>
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <artifactId>com.fasterxml.jackson.core</artifactId>-->
+<!--                    <groupId>jackson-annotations</groupId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <artifactId>com.fasterxml.jackson.core</artifactId>-->
+<!--                    <groupId>jackson-core</groupId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+                <version>3.6.0</version>
+            </plugin>
+
+        </plugins>
+    </build>
 </project>

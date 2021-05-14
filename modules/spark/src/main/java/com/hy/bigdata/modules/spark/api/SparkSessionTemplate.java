@@ -1,13 +1,11 @@
 package com.hy.bigdata.modules.spark.api;
 
 import com.hy.bigdata.modules.common.environment.ConfigEnvContext;
-import org.apache.commons.lang3.StringUtils;
+import com.hy.bigdata.modules.spark.common.javaheap.JavaHeapUtils;
 import org.apache.spark.SparkConf;
 import org.apache.spark.SparkContext;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.SparkSession;
-
-import java.util.ResourceBundle;
 
 /**
  *  @author yang.he
@@ -66,7 +64,8 @@ public class SparkSessionTemplate {
      */
     private void init(){
         init(ConfigEnvContext.getStringByFilePath("template/spark","com.spark.master"),
-                "demo", Boolean.parseBoolean(ConfigEnvContext.getStringByFilePath("template/spark","com.spark.enableHive")));
+                JavaHeapUtils.getInvokeName(false),
+                Boolean.parseBoolean(ConfigEnvContext.getStringByFilePath("template/spark","com.spark.enableHive")));
     }
 
 
