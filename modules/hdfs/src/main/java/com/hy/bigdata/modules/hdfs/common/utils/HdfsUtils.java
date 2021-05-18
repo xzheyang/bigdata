@@ -59,7 +59,7 @@ public class HdfsUtils {
     public void copyFromLocalFileWithLine() throws Exception {
         Path localPath = new Path("");
         Path hdfsPath = new Path("/hdfsapi");
-        InputStream in = new BufferedInputStream(new FileInputStream(new File("D:\\BaiduNetdiskDownload\\64、10小时入门大数据\\第5章 分布式计算框架MapReduce\\第5章 分布式计算框架MapReduce.mp4")));
+        InputStream in = new BufferedInputStream(new FileInputStream(new File("D:\\第5章 分布式计算框架MapReduce.mp4")));
         FSDataOutputStream output = fileSystem.create(new Path("video.mp4"), new Progressable() {
             @Override
             public void progress() {
